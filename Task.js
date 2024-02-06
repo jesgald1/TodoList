@@ -1,27 +1,60 @@
 import React from "react";
 import { View, Text, StyleSheet, Pressable } from "react-native";
 
-/*const Task = (props) => {
-    return(
-        <View style={styles.item}>
-            <View style={styles.itemLeft}>
-                <Pressable style={styles.square}></Pressable>
-                <Text style={styles.itemText}>{props.text}</Text>
-            
-            </View>
+const Task = (props) => {
+  return (
+    <View style={styles.item}>
+      <View style={styles.itemLeft}>
+        <View style={styles.square}></View>
+        <Text style={styles.itemText}>{props.text}</Text>
+      </View>
 
-            
-        </View>
+      <View style={styles.circular}></View>
+    </View>
+  );
+};
 
-    )  
-}*/
+const styles = StyleSheet.create({
+  item: {
+    backgroundColor: "#FFF",
+    padding: 15,
+    borderRadius: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 20,
+  },
 
-const Task = (props) => (
-  <Pressable style={styles.square}>
-    <Text>Tarea 1</Text>
-  </Pressable>
-);
+  itemLeft: {
+    flexDirection: "row",
+    alignContent: "center",
+    flexWrap: "wrap",
+  },
 
-const styles = StyleSheet.create({});
+  square: {
+    width: 24,
+    height: 24,
+    backgroundColor: "#558cf6",
+    opacity: 0.4,
+    borderRadius: 5,
+    marginRight: 15,
+  },
+
+  itemText: {
+    maxWidth: "80%",
+  },
+
+  circular: {
+    width: 12,
+    height: 12,
+    borderColor: "#558cf6",
+    borderWidth: 2,
+    borderRadius: 5,
+  },
+
+  items: {
+    marginTop: 30,
+  },
+});
 
 export default Task;
